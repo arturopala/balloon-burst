@@ -1,3 +1,5 @@
+![Scala CI](https://github.com/arturopala/balloon-burst/workflows/Scala%20CI/badge.svg)
+
 Balloon Burst
 ===
 
