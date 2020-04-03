@@ -6,7 +6,10 @@ Balloon Burst
 Motivation
 ----
 
-An exercise in reactive functional programming.
+An exercise in reactive functional programming. 
+
+Demonstrates simple RFP pattern with practical implementation, 
+and functional testing approach.
 
 Specification
 ---
@@ -21,6 +24,24 @@ inflations it can withstand,
 - If the number of inflate attempts goes over that balloons burst limit a BURST must be printed to the user, input commands after that go to the
 next balloon,
 - Once there are no balloons left the final score is printed to the console.
+
+Design
+---
+
+Basic RFP pattern is defined in a [Program](https://github.com/arturopala/balloon-burst/blob/master/src/main/scala/com/github/arturopala/balloonburst/Program.scala) trait.
+
+Main program logic is implemented as a pure function in a [BalloonBurst](https://github.com/arturopala/balloon-burst/blob/master/src/main/scala/com/github/arturopala/balloonburst/BalloonBurst.scala) object. 
+
+Command line program runner is presented in [BalloonBurstCommandLine](https://github.com/arturopala/balloon-burst/blob/master/src/main/scala/com/github/arturopala/balloonburst/BalloonBurstCommandLine.scala).
+
+Tests
+---
+
+There are two kind of tests provided:
+
+- unit tests of program logic in [BalloonBurstSpec](https://github.com/arturopala/balloon-burst/blob/master/src/test/scala/com/github/arturopala/balloonburst/BalloonBurstSpec.scala)
+- integration tests of program interaction simulation in [BalloonBurstSimulationSpec](https://github.com/arturopala/balloon-burst/blob/master/src/test/scala/com/github/arturopala/balloonburst/BalloonBurstSimulationSpec.scala)
+
 
 Run
 ---
